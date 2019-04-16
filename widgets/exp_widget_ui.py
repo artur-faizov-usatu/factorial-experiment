@@ -1,0 +1,103 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '..\..\resources\gui\exp_widget.ui'
+#
+# Created by: PyQt5 UI code generator 5.12
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(800, 600)
+        Form.setMinimumSize(QtCore.QSize(800, 600))
+        Form.setMaximumSize(QtCore.QSize(800, 600))
+        self.gridLayout = QtWidgets.QGridLayout(Form)
+        self.gridLayout.setObjectName("gridLayout")
+        self.toolBox = QtWidgets.QToolBox(Form)
+        self.toolBox.setObjectName("toolBox")
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.gridLayout_7 = QtWidgets.QGridLayout(self.page_3)
+        self.gridLayout_7.setObjectName("gridLayout_7")
+        self.groupBox = QtWidgets.QGroupBox(self.page_3)
+        self.groupBox.setObjectName("groupBox")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.factors_tv = QtWidgets.QTableView(self.groupBox)
+        self.factors_tv.setObjectName("factors_tv")
+        self.gridLayout_2.addWidget(self.factors_tv, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.add_factor_btn = QtWidgets.QPushButton(self.page_3)
+        self.add_factor_btn.setObjectName("add_factor_btn")
+        self.horizontalLayout.addWidget(self.add_factor_btn)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.gridLayout_7.addLayout(self.horizontalLayout, 1, 0, 1, 1)
+        self.toolBox.addItem(self.page_3, "")
+        self.page = QtWidgets.QWidget()
+        self.page.setGeometry(QtCore.QRect(0, 0, 294, 243))
+        self.page.setObjectName("page")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.page)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.groupBox_2 = QtWidgets.QGroupBox(self.page)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.groupBox_2)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.ffe_tv = QtWidgets.QTableView(self.groupBox_2)
+        self.ffe_tv.setObjectName("ffe_tv")
+        self.gridLayout_4.addWidget(self.ffe_tv, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.groupBox_2, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page, "")
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 782, 501))
+        self.page_2.setObjectName("page_2")
+        self.gridLayout_6 = QtWidgets.QGridLayout(self.page_2)
+        self.gridLayout_6.setObjectName("gridLayout_6")
+        self.groupBox_4 = QtWidgets.QGroupBox(self.page_2)
+        self.groupBox_4.setObjectName("groupBox_4")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.groupBox_4)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label = QtWidgets.QLabel(self.groupBox_4)
+        self.label.setObjectName("label")
+        self.horizontalLayout_2.addWidget(self.label)
+        self.p_sb = QtWidgets.QSpinBox(self.groupBox_4)
+        self.p_sb.setObjectName("p_sb")
+        self.horizontalLayout_2.addWidget(self.p_sb)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem1)
+        self.gridLayout_6.addWidget(self.groupBox_4, 0, 0, 1, 1)
+        self.groupBox_3 = QtWidgets.QGroupBox(self.page_2)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.groupBox_3)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.pfe_tv = QtWidgets.QTableView(self.groupBox_3)
+        self.pfe_tv.setObjectName("pfe_tv")
+        self.gridLayout_5.addWidget(self.pfe_tv, 0, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.groupBox_3, 1, 0, 1, 1)
+        self.toolBox.addItem(self.page_2, "")
+        self.gridLayout.addWidget(self.toolBox, 0, 0, 1, 1)
+
+        self.retranslateUi(Form)
+        self.toolBox.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Лабораторная работа 1. Фаизов А.Ф. МО-410"))
+        self.groupBox.setTitle(_translate("Form", "Факторы"))
+        self.add_factor_btn.setText(_translate("Form", "Добавить фактор"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("Form", "Факторы"))
+        self.groupBox_2.setTitle(_translate("Form", "Матрица эксперимента"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("Form", "Полный факторный эксперимент"))
+        self.groupBox_4.setTitle(_translate("Form", "Парметры"))
+        self.label.setText(_translate("Form", "p"))
+        self.groupBox_3.setTitle(_translate("Form", "Матрица эксперимента"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("Form", "Дробный факторный экспеимент"))
+
+
