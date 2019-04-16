@@ -72,5 +72,8 @@ class Factor:
         return self._interval
 
     def __repr__(self):
-        return "Name: {}, Min: {}, Max: {}, Zero: {}, Interval: {}".format(self.name, self.min,
-                                                                           self.max, self.zero, self.interval)
+        return "Name: {}, Min: {}, Max: {}, Zero: {}, Interval: {}".format(self.name,
+                                                                           self.min,
+                                                                           self.max,
+                                                                           self.zero,
+                                                                           self.interval)

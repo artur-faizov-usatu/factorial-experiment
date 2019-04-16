@@ -6,14 +6,15 @@ import math
 
 from algorithm.factor_experiment import Factor
 
+
 class AddFactorDialog(QDialog):
 
     def __init__(self, parent):
-        super().__init__(parent)
+        super().__init__(parent, flags=Qt.Dialog)
         self.ui = Ui_AddFactorDialog()
         self.ui.setupUi(self)
         self.connect_signals()
-        self.factor = 1
+        self.factor = None
         self.DEFAULT_MAX_VALUE = 1000000
         self.DEFAULT_MIN_VALUE = -1000000
 
@@ -31,8 +32,6 @@ class AddFactorDialog(QDialog):
         self.factor_name = "Factor"
 
         self.update_zero_level_value()
-
-
 
     def connect_signals(self):
         self.ui.min_factor_value_sb.valueChanged.connect(self.on_min_value_changed)
@@ -59,11 +58,10 @@ class AddFactorDialog(QDialog):
         else:
             self.factor_var_interval = var_interval
 
-
     def update_zero_level_value(self):
         self.zero_level_value = math.fabs(self.factor_max_value + self.factor_min_value) / 2
         value = '<html><head/><body><p><span style=" ' \
-                'font-size:14pt; font-weight:600; color:#48b515;">{}</span></p></body></html>'\
+                'font-size:14pt; font-weight:600; color:#48b515;">{}</span></p></body></html>' \
             .format(self.zero_level_value)
         self.ui.zero_level_value_lbl.setText(value)
 
@@ -77,4 +75,3 @@ class AddFactorDialog(QDialog):
             return self.factor
         else:
             return 0
-
